@@ -29,7 +29,6 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <Routes>
-              {/* Public Routes */}
               <Route 
                 path="/" 
                 element={
@@ -55,7 +54,6 @@ const App = () => (
                 } 
               />
 
-              {/* Protected Routes - Consultant */}
               <Route 
                 path="/cases" 
                 element={
@@ -81,7 +79,6 @@ const App = () => (
                 } 
               />
 
-              {/* Protected Routes - Admin */}
               <Route 
                 path="/admin/consultants" 
                 element={
@@ -91,7 +88,6 @@ const App = () => (
                 } 
               />
 
-              {/* Catch-all route */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

@@ -16,7 +16,6 @@ const CasesList: React.FC = () => {
 
   const fetchCases = async () => {
     setIsLoading(true);
-    // TODO: Call API to get cases
     const casesData = await getCases();
     setCases(casesData);
     setIsLoading(false);

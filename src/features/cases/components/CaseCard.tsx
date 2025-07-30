@@ -76,12 +76,10 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseData }) => {
       </CardHeader>
       
 <CardContent className="flex flex-col h-full gap-y-1">
-    {/* 1. Description */}
     <p className="basis-1/2 flex-none overflow-hidden text-muted-foreground text-sm line-clamp-3">
       {caseData.description}
     </p>
 
-    {/* 2. Meta row (date + speciality) */}
     <div className="basis-[15%] flex-none flex items-center justify-between text-xs">
       <div className="flex items-center gap-1">
         <Clock className="h-3 w-3" />
@@ -94,7 +92,6 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseData }) => {
       </Badge>
     </div>
 
-    {/* 3. Button */}
     <div className="basis-[35%] flex-none flex items-end mt-2 pb-2">
       <Button asChild className="w-full" size="sm">
         <Link to={`/cases/${caseData.id}`} className="flex items-center justify-center gap-2">

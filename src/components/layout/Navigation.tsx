@@ -18,17 +18,14 @@ const Navigation: React.FC = () => {
     <nav className="bg-card shadow-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-xl font-bold text-primary">
               منصة الاستشارات الذكية
             </Link>
           </div>
 
-          {/* Navigation Links */}
           <div className="flex items-center space-x-reverse space-x-4">
             {!isAuthenticated ? (
-              // Non-registered user navigation
               <>
                 <Button
                   asChild
@@ -58,7 +55,6 @@ const Navigation: React.FC = () => {
                 </Button>
               </>
             ) : user?.role === 'admin' ? (
-              // Admin navigation
               <>
                 <Button
                   asChild
@@ -79,7 +75,6 @@ const Navigation: React.FC = () => {
                 </Button>
               </>
             ) : (
-              // Registered consultant navigation
               <>
                 <Button
                   asChild

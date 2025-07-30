@@ -58,7 +58,6 @@ const UploadReferences: React.FC = () => {
           </p>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* File Input */}
           <input
             ref={fileInputRef}
             type="file"
@@ -67,7 +66,6 @@ const UploadReferences: React.FC = () => {
             accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
           />
 
-          {/* Upload Area */}
           <div 
             onClick={triggerFileSelect}
             className="border-2 border-dashed border-border rounded-lg p-8 text-center cursor-pointer 
@@ -83,7 +81,6 @@ const UploadReferences: React.FC = () => {
             </p>
           </div>
 
-          {/* Selected File Display */}
           {selectedFile && (
             <Card className="bg-muted/50">
               <CardContent className="p-4">
@@ -103,7 +100,6 @@ const UploadReferences: React.FC = () => {
             </Card>
           )}
 
-          {/* Upload Button */}
           <Button
             onClick={handleUpload}
             disabled={!selectedFile || isUploading}
@@ -123,7 +119,6 @@ const UploadReferences: React.FC = () => {
             )}
           </Button>
 
-          {/* Instructions */}
           <div className="bg-accent/50 rounded-lg p-4">
             <h4 className="font-semibold text-sm mb-2">إرشادات الرفع:</h4>
             <ul className="text-xs text-muted-foreground space-y-1">

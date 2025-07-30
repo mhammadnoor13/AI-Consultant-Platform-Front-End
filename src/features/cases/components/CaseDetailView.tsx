@@ -76,7 +76,6 @@ const CaseDetailView: React.FC = () => {
     if (!caseId) return;
     
     setIsLoading(true);
-    // TODO: Call API to get case detail
     const detail = await getCaseDetail(caseId);
     setCaseDetail(detail);
     setIsLoading(false);
@@ -104,7 +103,6 @@ const CaseDetailView: React.FC = () => {
       solution
     };
 
-    // TODO: Call API to submit review
     const success = await submitReview(reviewData);
     
     if (success) {
@@ -142,7 +140,6 @@ const CaseDetailView: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      {/* Header */}
       <div className="mb-6">
         <Button 
           onClick={() => navigate('/cases')} 
@@ -174,7 +171,6 @@ const CaseDetailView: React.FC = () => {
         </div>
       </div>
 
-      {/* Case Details */}
       <Card className="mb-6">
         <CardHeader>
           <CardTitle>وصف الحالة</CardTitle>
@@ -186,7 +182,6 @@ const CaseDetailView: React.FC = () => {
         </CardContent>
       </Card>
 
-      {/* Suggestions */}
       <Card className="mb-6">
         <CardHeader>
           <CardTitle>اقتراحات الذكاء الاصطناعي</CardTitle>
@@ -220,7 +215,6 @@ const CaseDetailView: React.FC = () => {
                           </div>
                         ))}
                         
-                        {/* Custom suggestion option */}
                         <div className="space-y-2">
                           <div className="flex items-center space-x-reverse space-x-2">
                             <RadioGroupItem value="custom" id="custom" />
@@ -279,7 +273,6 @@ const CaseDetailView: React.FC = () => {
         </CardContent>
       </Card>
 
-      {/* Confirmation Dialog */}
       <AlertDialog open={showConfirmDialog} onOpenChange={setShowConfirmDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>

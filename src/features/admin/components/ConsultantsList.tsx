@@ -18,7 +18,6 @@ const ConsultantsList: React.FC = () => {
 
   const fetchConsultants = async () => {
     setIsLoading(true);
-    // TODO: Call API to get pending consultants
     const consultantsData = await getPendingConsultants();
     setConsultants(consultantsData);
     setIsLoading(false);

@@ -7,12 +7,7 @@ export interface AuthResponse {
   //user: User ;
 }
 
-/**
- * Logs in a user with given credentials.
- * @param credentials { email, password }
- * @returns { token, user }
- * @throws Error if the HTTP response is not ok
- */
+
 export async function login(
   credentials: LoginRequest
 ): Promise<AuthResponse> {
