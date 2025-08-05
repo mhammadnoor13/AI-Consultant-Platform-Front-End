@@ -165,9 +165,12 @@ const CaseDetailView: React.FC = () => {
             </div>
           </div>
           
-          <Badge variant="secondary" className="text-sm">
-            {caseDetail.status}
-          </Badge>
+      <Badge variant="secondary" className="text-sm">
+        {caseDetail.status === "ReadyToReview"
+          ? "بانتظار المراجعة"
+          : "بانتظار اقتراحات الذكاء الصنعي"}
+      </Badge>
+
         </div>
       </div>
 
@@ -184,7 +187,7 @@ const CaseDetailView: React.FC = () => {
 
       <Card className="mb-6">
         <CardHeader>
-          <CardTitle>اقتراحات الذكاء الاصطناعي</CardTitle>
+          <CardTitle>اقتراحات الذكاء الصنعي</CardTitle>
           <p className="text-sm text-muted-foreground">
             اختر أحد الاقتراحات التالية أو اكتب اقتراحك المخصص
           </p>

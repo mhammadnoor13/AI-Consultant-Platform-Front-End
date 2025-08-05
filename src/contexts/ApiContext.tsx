@@ -91,6 +91,7 @@ export const ApiProvider: React.FC<ApiProviderProps> = ({ children }) => {
       }
 
       const data = (await response.json()) as Case[];
+      console.log(data);
       return data;  
       // Mock data for development
       const mockCases: Case[] = [
@@ -149,17 +150,17 @@ export const ApiProvider: React.FC<ApiProviderProps> = ({ children }) => {
 
   const submitReview = async (reviewData: ReviewSubmissionRequest): Promise<boolean> => {
     try {
-      // TODO: Call API to submit review
-      const response = await fetch(`http://localhost:5100/cases/${reviewData.caseId}/add-solution`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...getAuthHeaders(),
-        },
-        body: JSON.stringify(reviewData.solution),
-      });
+      // // TODO: Call API to submit review
+      // const response = await fetch(`http://localhost:5100/cases/${reviewData.caseId}/add-solution`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     ...getAuthHeaders(),
+      //   },
+      //   body: JSON.stringify(reviewData.solution),
+      // });
       
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
         title: 'تم إرسال المراجعة بنجاح',

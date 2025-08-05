@@ -87,9 +87,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseData }) => {
           منذ {daysWaiting} {daysWaiting === 1 ? 'يوم' : 'أيام'}
         </span>
       </div>
-      <Badge variant="secondary" className="text-xs">
-        {caseData.speciality}
-      </Badge>
+
     </div>
 
     <div className="basis-[35%] flex-none flex items-end mt-2 pb-2">
